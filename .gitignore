@@ -1,0 +1,14 @@
+/RUNNING_PID
+logs/
+target/
+bin/
+libexec/
+.settings/
+project/
+project/!build.properties
+.cache-main
+*.classpath
+*.project
+.sbtserver/
+.idea/
+*.MF
