@@ -4,7 +4,6 @@ target/
 bin/
 libexec/
 .settings/
-project/
 project/!build.properties
 .cache-main
 *.classpath
