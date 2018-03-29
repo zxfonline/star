@@ -13,8 +13,7 @@ public class ProtoBufClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         Person.Builder builder=Person.newBuilder();
-        builder.setEmail("zxfonline@sina.com").setId(1).setName("zxf");
-        builder.addProfile(Profile.newBuilder().setIcon("icon1").setNickName("nick1").build());
+        builder.setBool(true).setDouble(1.1).setFloat(1.1f).setInt32(1).setInt64(1l).setSint32(1).setString("1").setUint64(1l);
         ctx.writeAndFlush(builder.build());
     }
 

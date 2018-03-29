@@ -20,12 +20,13 @@ public class WebsocketServer {
     private final EventLoopGroup workerGroup = new NioEventLoopGroup();
     private Channel channel;
 
-    public ChannelFuture start(InetSocketAddress address) {
+    public ChannelFuture start(String ip,int port) {
+        InetSocketAddress address=new InetSocketAddress(ip,port);
         ServerBootstrap bootstrap = new ServerBootstrap();
         bootstrap.group(bossGroup, workerGroup)
                 .channel(NioServerSocketChannel.class)
                 .handler(new LoggingHandler(LogLevel.DEBUG))
-                .childHandler(new WebsocketServerInitializer())
+                .childHandler(new WebsocketServerInitializer(String.format("ws://%s:%s/ws",ip,String.valueOf(port))))
                 .option(ChannelOption.SO_BACKLOG, 128)
                 .childOption(ChannelOption.SO_KEEPALIVE, true);
         ChannelFuture future = bootstrap.bind(address);
@@ -51,8 +52,7 @@ public class WebsocketServer {
             port = 8080;
         }
         final WebsocketServer endpoint = new WebsocketServer();
-        ChannelFuture future = endpoint.start(
-                new InetSocketAddress("192.168.10.52",port));
+        ChannelFuture future = endpoint.start("192.168.10.52",port);
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {

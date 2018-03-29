@@ -646,70 +646,111 @@ public final class PbTest {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
+     * <code>optional string _string = 1;</code>
      */
-    boolean hasName();
+    boolean hasString();
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
+     * <code>optional string _string = 1;</code>
      */
-    java.lang.String getName();
+    java.lang.String getString();
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>required int32 id = 2 [default = 0];</code>
-     *
-     * <pre>
-     * Unique ID number for this person.
-     * </pre>
-     */
-    boolean hasId();
-    /**
-     * <code>required int32 id = 2 [default = 0];</code>
-     *
-     * <pre>
-     * Unique ID number for this person.
-     * </pre>
-     */
-    int getId();
-
-    /**
-     * <code>optional string email = 3 [default = "email"];</code>
-     */
-    boolean hasEmail();
-    /**
-     * <code>optional string email = 3 [default = "email"];</code>
-     */
-    java.lang.String getEmail();
-    /**
-     * <code>optional string email = 3 [default = "email"];</code>
+     * <code>optional string _string = 1;</code>
      */
     com.google.protobuf.ByteString
-        getEmailBytes();
+        getStringBytes();
 
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>optional bool _bool = 2;</code>
+     */
+    boolean hasBool();
+    /**
+     * <code>optional bool _bool = 2;</code>
+     */
+    boolean getBool();
+
+    /**
+     * <code>optional double _double = 3;</code>
+     */
+    boolean hasDouble();
+    /**
+     * <code>optional double _double = 3;</code>
+     */
+    double getDouble();
+
+    /**
+     * <code>optional float _float = 4;</code>
+     */
+    boolean hasFloat();
+    /**
+     * <code>optional float _float = 4;</code>
+     */
+    float getFloat();
+
+    /**
+     * <code>optional int32 _int32 = 5;</code>
+     */
+    boolean hasInt32();
+    /**
+     * <code>optional int32 _int32 = 5;</code>
+     */
+    int getInt32();
+
+    /**
+     * <code>optional int64 _int64 = 6;</code>
+     */
+    boolean hasInt64();
+    /**
+     * <code>optional int64 _int64 = 6;</code>
+     */
+    long getInt64();
+
+    /**
+     * <code>optional uint32 _uint32 = 7;</code>
+     */
+    boolean hasUint32();
+    /**
+     * <code>optional uint32 _uint32 = 7;</code>
+     */
+    int getUint32();
+
+    /**
+     * <code>optional uint64 _uint64 = 8;</code>
+     */
+    boolean hasUint64();
+    /**
+     * <code>optional uint64 _uint64 = 8;</code>
+     */
+    long getUint64();
+
+    /**
+     * <code>optional sint32 _sint32 = 9;</code>
+     */
+    boolean hasSint32();
+    /**
+     * <code>optional sint32 _sint32 = 9;</code>
+     */
+    int getSint32();
+
+    /**
+     * <code>repeated .Profile profile = 13;</code>
      */
     java.util.List<com.rgtech.bean.PbTest.Profile> 
         getProfileList();
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     com.rgtech.bean.PbTest.Profile getProfile(int index);
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     int getProfileCount();
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     java.util.List<? extends com.rgtech.bean.PbTest.ProfileOrBuilder> 
         getProfileOrBuilderList();
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     com.rgtech.bean.PbTest.ProfileOrBuilder getProfileOrBuilder(
         int index);
@@ -769,24 +810,53 @@ public final class PbTest {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = bs;
+              String_ = bs;
               break;
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              id_ = input.readInt32();
+              Bool_ = input.readBool();
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 25: {
               bitField0_ |= 0x00000004;
-              email_ = bs;
+              Double_ = input.readDouble();
               break;
             }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            case 37: {
+              bitField0_ |= 0x00000008;
+              Float_ = input.readFloat();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              Int32_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              Int64_ = input.readInt64();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              Uint32_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              Uint64_ = input.readUInt64();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              Sint32_ = input.readSInt32();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
                 profile_ = new java.util.ArrayList<com.rgtech.bean.PbTest.Profile>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000200;
               }
               profile_.add(input.readMessage(com.rgtech.bean.PbTest.Profile.PARSER, extensionRegistry));
               break;
@@ -799,7 +869,7 @@ public final class PbTest {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           profile_ = java.util.Collections.unmodifiableList(profile_);
         }
         this.unknownFields = unknownFields.build();
@@ -834,19 +904,19 @@ public final class PbTest {
     }
 
     private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private java.lang.Object name_;
+    public static final int _STRING_FIELD_NUMBER = 1;
+    private java.lang.Object String_;
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
+     * <code>optional string _string = 1;</code>
      */
-    public boolean hasName() {
+    public boolean hasString() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
+     * <code>optional string _string = 1;</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getString() {
+      java.lang.Object ref = String_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -854,122 +924,177 @@ public final class PbTest {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          name_ = s;
+          String_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string name = 1 [default = "HOME"];</code>
+     * <code>optional string _string = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getStringBytes() {
+      java.lang.Object ref = String_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        String_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int ID_FIELD_NUMBER = 2;
-    private int id_;
+    public static final int _BOOL_FIELD_NUMBER = 2;
+    private boolean Bool_;
     /**
-     * <code>required int32 id = 2 [default = 0];</code>
-     *
-     * <pre>
-     * Unique ID number for this person.
-     * </pre>
+     * <code>optional bool _bool = 2;</code>
      */
-    public boolean hasId() {
+    public boolean hasBool() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required int32 id = 2 [default = 0];</code>
-     *
-     * <pre>
-     * Unique ID number for this person.
-     * </pre>
+     * <code>optional bool _bool = 2;</code>
      */
-    public int getId() {
-      return id_;
+    public boolean getBool() {
+      return Bool_;
     }
 
-    public static final int EMAIL_FIELD_NUMBER = 3;
-    private java.lang.Object email_;
+    public static final int _DOUBLE_FIELD_NUMBER = 3;
+    private double Double_;
     /**
-     * <code>optional string email = 3 [default = "email"];</code>
+     * <code>optional double _double = 3;</code>
      */
-    public boolean hasEmail() {
+    public boolean hasDouble() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional string email = 3 [default = "email"];</code>
+     * <code>optional double _double = 3;</code>
      */
-    public java.lang.String getEmail() {
-      java.lang.Object ref = email_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          email_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string email = 3 [default = "email"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getEmailBytes() {
-      java.lang.Object ref = email_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        email_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public double getDouble() {
+      return Double_;
     }
 
-    public static final int PROFILE_FIELD_NUMBER = 6;
+    public static final int _FLOAT_FIELD_NUMBER = 4;
+    private float Float_;
+    /**
+     * <code>optional float _float = 4;</code>
+     */
+    public boolean hasFloat() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional float _float = 4;</code>
+     */
+    public float getFloat() {
+      return Float_;
+    }
+
+    public static final int _INT32_FIELD_NUMBER = 5;
+    private int Int32_;
+    /**
+     * <code>optional int32 _int32 = 5;</code>
+     */
+    public boolean hasInt32() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 _int32 = 5;</code>
+     */
+    public int getInt32() {
+      return Int32_;
+    }
+
+    public static final int _INT64_FIELD_NUMBER = 6;
+    private long Int64_;
+    /**
+     * <code>optional int64 _int64 = 6;</code>
+     */
+    public boolean hasInt64() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int64 _int64 = 6;</code>
+     */
+    public long getInt64() {
+      return Int64_;
+    }
+
+    public static final int _UINT32_FIELD_NUMBER = 7;
+    private int Uint32_;
+    /**
+     * <code>optional uint32 _uint32 = 7;</code>
+     */
+    public boolean hasUint32() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint32 _uint32 = 7;</code>
+     */
+    public int getUint32() {
+      return Uint32_;
+    }
+
+    public static final int _UINT64_FIELD_NUMBER = 8;
+    private long Uint64_;
+    /**
+     * <code>optional uint64 _uint64 = 8;</code>
+     */
+    public boolean hasUint64() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional uint64 _uint64 = 8;</code>
+     */
+    public long getUint64() {
+      return Uint64_;
+    }
+
+    public static final int _SINT32_FIELD_NUMBER = 9;
+    private int Sint32_;
+    /**
+     * <code>optional sint32 _sint32 = 9;</code>
+     */
+    public boolean hasSint32() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional sint32 _sint32 = 9;</code>
+     */
+    public int getSint32() {
+      return Sint32_;
+    }
+
+    public static final int PROFILE_FIELD_NUMBER = 13;
     private java.util.List<com.rgtech.bean.PbTest.Profile> profile_;
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     public java.util.List<com.rgtech.bean.PbTest.Profile> getProfileList() {
       return profile_;
     }
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     public java.util.List<? extends com.rgtech.bean.PbTest.ProfileOrBuilder> 
         getProfileOrBuilderList() {
       return profile_;
     }
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     public int getProfileCount() {
       return profile_.size();
     }
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     public com.rgtech.bean.PbTest.Profile getProfile(int index) {
       return profile_.get(index);
     }
     /**
-     * <code>repeated .Profile profile = 6;</code>
+     * <code>repeated .Profile profile = 13;</code>
      */
     public com.rgtech.bean.PbTest.ProfileOrBuilder getProfileOrBuilder(
         int index) {
@@ -977,9 +1102,15 @@ public final class PbTest {
     }
 
     private void initFields() {
-      name_ = "HOME";
-      id_ = 0;
-      email_ = "email";
+      String_ = "";
+      Bool_ = false;
+      Double_ = 0D;
+      Float_ = 0F;
+      Int32_ = 0;
+      Int64_ = 0L;
+      Uint32_ = 0;
+      Uint64_ = 0L;
+      Sint32_ = 0;
       profile_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
@@ -988,14 +1119,6 @@ public final class PbTest {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1004,16 +1127,34 @@ public final class PbTest {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getNameBytes());
+        output.writeBytes(1, getStringBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, id_);
+        output.writeBool(2, Bool_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getEmailBytes());
+        output.writeDouble(3, Double_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(4, Float_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, Int32_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt64(6, Int64_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(7, Uint32_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeUInt64(8, Uint64_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeSInt32(9, Sint32_);
       }
       for (int i = 0; i < profile_.size(); i++) {
-        output.writeMessage(6, profile_.get(i));
+        output.writeMessage(13, profile_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -1026,19 +1167,43 @@ public final class PbTest {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getNameBytes());
+          .computeBytesSize(1, getStringBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, id_);
+          .computeBoolSize(2, Bool_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getEmailBytes());
+          .computeDoubleSize(3, Double_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, Float_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, Int32_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, Int64_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, Uint32_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, Uint64_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSInt32Size(9, Sint32_);
       }
       for (int i = 0; i < profile_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, profile_.get(i));
+          .computeMessageSize(13, profile_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1158,15 +1323,27 @@ public final class PbTest {
 
       public Builder clear() {
         super.clear();
-        name_ = "HOME";
+        String_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        id_ = 0;
+        Bool_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
-        email_ = "email";
+        Double_ = 0D;
         bitField0_ = (bitField0_ & ~0x00000004);
+        Float_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        Int32_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        Int64_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        Uint32_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        Uint64_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        Sint32_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000100);
         if (profileBuilder_ == null) {
           profile_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           profileBuilder_.clear();
         }
@@ -1201,19 +1378,43 @@ public final class PbTest {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.name_ = name_;
+        result.String_ = String_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.id_ = id_;
+        result.Bool_ = Bool_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.email_ = email_;
+        result.Double_ = Double_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.Float_ = Float_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.Int32_ = Int32_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.Int64_ = Int64_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.Uint32_ = Uint32_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.Uint64_ = Uint64_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.Sint32_ = Sint32_;
         if (profileBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
             profile_ = java.util.Collections.unmodifiableList(profile_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.profile_ = profile_;
         } else {
@@ -1235,24 +1436,40 @@ public final class PbTest {
 
       public Builder mergeFrom(com.rgtech.bean.PbTest.Person other) {
         if (other == com.rgtech.bean.PbTest.Person.getDefaultInstance()) return this;
-        if (other.hasName()) {
+        if (other.hasString()) {
           bitField0_ |= 0x00000001;
-          name_ = other.name_;
+          String_ = other.String_;
           onChanged();
         }
-        if (other.hasId()) {
-          setId(other.getId());
+        if (other.hasBool()) {
+          setBool(other.getBool());
         }
-        if (other.hasEmail()) {
-          bitField0_ |= 0x00000004;
-          email_ = other.email_;
-          onChanged();
+        if (other.hasDouble()) {
+          setDouble(other.getDouble());
+        }
+        if (other.hasFloat()) {
+          setFloat(other.getFloat());
+        }
+        if (other.hasInt32()) {
+          setInt32(other.getInt32());
+        }
+        if (other.hasInt64()) {
+          setInt64(other.getInt64());
+        }
+        if (other.hasUint32()) {
+          setUint32(other.getUint32());
+        }
+        if (other.hasUint64()) {
+          setUint64(other.getUint64());
+        }
+        if (other.hasSint32()) {
+          setSint32(other.getSint32());
         }
         if (profileBuilder_ == null) {
           if (!other.profile_.isEmpty()) {
             if (profile_.isEmpty()) {
               profile_ = other.profile_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensureProfileIsMutable();
               profile_.addAll(other.profile_);
@@ -1265,7 +1482,7 @@ public final class PbTest {
               profileBuilder_.dispose();
               profileBuilder_ = null;
               profile_ = other.profile_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000200);
               profileBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getProfileFieldBuilder() : null;
@@ -1279,14 +1496,6 @@ public final class PbTest {
       }
 
       public final boolean isInitialized() {
-        if (!hasName()) {
-          
-          return false;
-        }
-        if (!hasId()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -1309,24 +1518,24 @@ public final class PbTest {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "HOME";
+      private java.lang.Object String_ = "";
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
-      public boolean hasName() {
+      public boolean hasString() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
+      public java.lang.String getString() {
+        java.lang.Object ref = String_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            name_ = s;
+            String_ = s;
           }
           return s;
         } else {
@@ -1334,177 +1543,309 @@ public final class PbTest {
         }
       }
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
+          getStringBytes() {
+        java.lang.Object ref = String_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          name_ = b;
+          String_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
-      public Builder setName(
+      public Builder setString(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        name_ = value;
+        String_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
-      public Builder clearName() {
+      public Builder clearString() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = getDefaultInstance().getName();
+        String_ = getDefaultInstance().getString();
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 1 [default = "HOME"];</code>
+       * <code>optional string _string = 1;</code>
        */
-      public Builder setNameBytes(
+      public Builder setStringBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        name_ = value;
+        String_ = value;
         onChanged();
         return this;
       }
 
-      private int id_ ;
+      private boolean Bool_ ;
       /**
-       * <code>required int32 id = 2 [default = 0];</code>
-       *
-       * <pre>
-       * Unique ID number for this person.
-       * </pre>
+       * <code>optional bool _bool = 2;</code>
        */
-      public boolean hasId() {
+      public boolean hasBool() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required int32 id = 2 [default = 0];</code>
-       *
-       * <pre>
-       * Unique ID number for this person.
-       * </pre>
+       * <code>optional bool _bool = 2;</code>
        */
-      public int getId() {
-        return id_;
+      public boolean getBool() {
+        return Bool_;
       }
       /**
-       * <code>required int32 id = 2 [default = 0];</code>
-       *
-       * <pre>
-       * Unique ID number for this person.
-       * </pre>
+       * <code>optional bool _bool = 2;</code>
        */
-      public Builder setId(int value) {
+      public Builder setBool(boolean value) {
         bitField0_ |= 0x00000002;
-        id_ = value;
+        Bool_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int32 id = 2 [default = 0];</code>
-       *
-       * <pre>
-       * Unique ID number for this person.
-       * </pre>
+       * <code>optional bool _bool = 2;</code>
        */
-      public Builder clearId() {
+      public Builder clearBool() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        id_ = 0;
+        Bool_ = false;
         onChanged();
         return this;
       }
 
-      private java.lang.Object email_ = "email";
+      private double Double_ ;
       /**
-       * <code>optional string email = 3 [default = "email"];</code>
+       * <code>optional double _double = 3;</code>
        */
-      public boolean hasEmail() {
+      public boolean hasDouble() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional string email = 3 [default = "email"];</code>
+       * <code>optional double _double = 3;</code>
        */
-      public java.lang.String getEmail() {
-        java.lang.Object ref = email_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            email_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public double getDouble() {
+        return Double_;
       }
       /**
-       * <code>optional string email = 3 [default = "email"];</code>
+       * <code>optional double _double = 3;</code>
        */
-      public com.google.protobuf.ByteString
-          getEmailBytes() {
-        java.lang.Object ref = email_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          email_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>optional string email = 3 [default = "email"];</code>
-       */
-      public Builder setEmail(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        email_ = value;
+      public Builder setDouble(double value) {
+        bitField0_ |= 0x00000004;
+        Double_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string email = 3 [default = "email"];</code>
+       * <code>optional double _double = 3;</code>
        */
-      public Builder clearEmail() {
+      public Builder clearDouble() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        email_ = getDefaultInstance().getEmail();
+        Double_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private float Float_ ;
+      /**
+       * <code>optional float _float = 4;</code>
+       */
+      public boolean hasFloat() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float _float = 4;</code>
+       */
+      public float getFloat() {
+        return Float_;
+      }
+      /**
+       * <code>optional float _float = 4;</code>
+       */
+      public Builder setFloat(float value) {
+        bitField0_ |= 0x00000008;
+        Float_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string email = 3 [default = "email"];</code>
+       * <code>optional float _float = 4;</code>
        */
-      public Builder setEmailBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        email_ = value;
+      public Builder clearFloat() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        Float_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int Int32_ ;
+      /**
+       * <code>optional int32 _int32 = 5;</code>
+       */
+      public boolean hasInt32() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 _int32 = 5;</code>
+       */
+      public int getInt32() {
+        return Int32_;
+      }
+      /**
+       * <code>optional int32 _int32 = 5;</code>
+       */
+      public Builder setInt32(int value) {
+        bitField0_ |= 0x00000010;
+        Int32_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 _int32 = 5;</code>
+       */
+      public Builder clearInt32() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        Int32_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long Int64_ ;
+      /**
+       * <code>optional int64 _int64 = 6;</code>
+       */
+      public boolean hasInt64() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int64 _int64 = 6;</code>
+       */
+      public long getInt64() {
+        return Int64_;
+      }
+      /**
+       * <code>optional int64 _int64 = 6;</code>
+       */
+      public Builder setInt64(long value) {
+        bitField0_ |= 0x00000020;
+        Int64_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 _int64 = 6;</code>
+       */
+      public Builder clearInt64() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        Int64_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int Uint32_ ;
+      /**
+       * <code>optional uint32 _uint32 = 7;</code>
+       */
+      public boolean hasUint32() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 _uint32 = 7;</code>
+       */
+      public int getUint32() {
+        return Uint32_;
+      }
+      /**
+       * <code>optional uint32 _uint32 = 7;</code>
+       */
+      public Builder setUint32(int value) {
+        bitField0_ |= 0x00000040;
+        Uint32_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 _uint32 = 7;</code>
+       */
+      public Builder clearUint32() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        Uint32_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long Uint64_ ;
+      /**
+       * <code>optional uint64 _uint64 = 8;</code>
+       */
+      public boolean hasUint64() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional uint64 _uint64 = 8;</code>
+       */
+      public long getUint64() {
+        return Uint64_;
+      }
+      /**
+       * <code>optional uint64 _uint64 = 8;</code>
+       */
+      public Builder setUint64(long value) {
+        bitField0_ |= 0x00000080;
+        Uint64_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 _uint64 = 8;</code>
+       */
+      public Builder clearUint64() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        Uint64_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int Sint32_ ;
+      /**
+       * <code>optional sint32 _sint32 = 9;</code>
+       */
+      public boolean hasSint32() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional sint32 _sint32 = 9;</code>
+       */
+      public int getSint32() {
+        return Sint32_;
+      }
+      /**
+       * <code>optional sint32 _sint32 = 9;</code>
+       */
+      public Builder setSint32(int value) {
+        bitField0_ |= 0x00000100;
+        Sint32_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sint32 _sint32 = 9;</code>
+       */
+      public Builder clearSint32() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        Sint32_ = 0;
         onChanged();
         return this;
       }
@@ -1512,9 +1853,9 @@ public final class PbTest {
       private java.util.List<com.rgtech.bean.PbTest.Profile> profile_ =
         java.util.Collections.emptyList();
       private void ensureProfileIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
           profile_ = new java.util.ArrayList<com.rgtech.bean.PbTest.Profile>(profile_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -1522,7 +1863,7 @@ public final class PbTest {
           com.rgtech.bean.PbTest.Profile, com.rgtech.bean.PbTest.Profile.Builder, com.rgtech.bean.PbTest.ProfileOrBuilder> profileBuilder_;
 
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public java.util.List<com.rgtech.bean.PbTest.Profile> getProfileList() {
         if (profileBuilder_ == null) {
@@ -1532,7 +1873,7 @@ public final class PbTest {
         }
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public int getProfileCount() {
         if (profileBuilder_ == null) {
@@ -1542,7 +1883,7 @@ public final class PbTest {
         }
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public com.rgtech.bean.PbTest.Profile getProfile(int index) {
         if (profileBuilder_ == null) {
@@ -1552,7 +1893,7 @@ public final class PbTest {
         }
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder setProfile(
           int index, com.rgtech.bean.PbTest.Profile value) {
@@ -1569,7 +1910,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder setProfile(
           int index, com.rgtech.bean.PbTest.Profile.Builder builderForValue) {
@@ -1583,7 +1924,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder addProfile(com.rgtech.bean.PbTest.Profile value) {
         if (profileBuilder_ == null) {
@@ -1599,7 +1940,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder addProfile(
           int index, com.rgtech.bean.PbTest.Profile value) {
@@ -1616,7 +1957,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder addProfile(
           com.rgtech.bean.PbTest.Profile.Builder builderForValue) {
@@ -1630,7 +1971,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder addProfile(
           int index, com.rgtech.bean.PbTest.Profile.Builder builderForValue) {
@@ -1644,7 +1985,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder addAllProfile(
           java.lang.Iterable<? extends com.rgtech.bean.PbTest.Profile> values) {
@@ -1659,12 +2000,12 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder clearProfile() {
         if (profileBuilder_ == null) {
           profile_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           profileBuilder_.clear();
@@ -1672,7 +2013,7 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public Builder removeProfile(int index) {
         if (profileBuilder_ == null) {
@@ -1685,14 +2026,14 @@ public final class PbTest {
         return this;
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public com.rgtech.bean.PbTest.Profile.Builder getProfileBuilder(
           int index) {
         return getProfileFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public com.rgtech.bean.PbTest.ProfileOrBuilder getProfileOrBuilder(
           int index) {
@@ -1702,7 +2043,7 @@ public final class PbTest {
         }
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public java.util.List<? extends com.rgtech.bean.PbTest.ProfileOrBuilder> 
            getProfileOrBuilderList() {
@@ -1713,14 +2054,14 @@ public final class PbTest {
         }
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public com.rgtech.bean.PbTest.Profile.Builder addProfileBuilder() {
         return getProfileFieldBuilder().addBuilder(
             com.rgtech.bean.PbTest.Profile.getDefaultInstance());
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public com.rgtech.bean.PbTest.Profile.Builder addProfileBuilder(
           int index) {
@@ -1728,7 +2069,7 @@ public final class PbTest {
             index, com.rgtech.bean.PbTest.Profile.getDefaultInstance());
       }
       /**
-       * <code>repeated .Profile profile = 6;</code>
+       * <code>repeated .Profile profile = 13;</code>
        */
       public java.util.List<com.rgtech.bean.PbTest.Profile.Builder> 
            getProfileBuilderList() {
@@ -1741,7 +2082,7 @@ public final class PbTest {
           profileBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               com.rgtech.bean.PbTest.Profile, com.rgtech.bean.PbTest.Profile.Builder, com.rgtech.bean.PbTest.ProfileOrBuilder>(
                   profile_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
                   isClean());
           profile_ = null;
@@ -1780,10 +2121,13 @@ public final class PbTest {
   static {
     java.lang.String[] descriptorData = {
       "\n\032src/main/protos/test.proto\"*\n\007Profile\022" +
-      "\021\n\tnick_name\030\001 \001(\t\022\014\n\004icon\030\002 \001(\t\"\\\n\006Pers" +
-      "on\022\022\n\004name\030\001 \002(\t:\004HOME\022\r\n\002id\030\002 \002(\005:\0010\022\024\n" +
-      "\005email\030\003 \001(\t:\005email\022\031\n\007profile\030\006 \003(\0132\010.P" +
-      "rofileB\031\n\017com.rgtech.beanB\006PbTest"
+      "\021\n\tnick_name\030\001 \001(\t\022\014\n\004icon\030\002 \001(\t\"\267\001\n\006Per" +
+      "son\022\017\n\007_string\030\001 \001(\t\022\r\n\005_bool\030\002 \001(\010\022\017\n\007_" +
+      "double\030\003 \001(\001\022\016\n\006_float\030\004 \001(\002\022\016\n\006_int32\030\005" +
+      " \001(\005\022\016\n\006_int64\030\006 \001(\003\022\017\n\007_uint32\030\007 \001(\r\022\017\n" +
+      "\007_uint64\030\010 \001(\004\022\017\n\007_sint32\030\t \001(\021\022\031\n\007profi" +
+      "le\030\r \003(\0132\010.ProfileB\031\n\017com.rgtech.beanB\006P" +
+      "bTest"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1808,7 +2152,7 @@ public final class PbTest {
     internal_static_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Person_descriptor,
-        new java.lang.String[] { "Name", "Id", "Email", "Profile", });
+        new java.lang.String[] { "String", "Bool", "Double", "Float", "Int32", "Int64", "Uint32", "Uint64", "Sint32", "Profile", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
