@@ -4,6 +4,9 @@ version := "1.0"
 
 scalaVersion := "2.11.11"
 
+javacOptions ++= Seq("-encoding", "UTF-8")
+javacOptions ++= Seq("-source", "1.8")
+
 libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.google.protobuf" % "protobuf-java" % "3.5.1",
